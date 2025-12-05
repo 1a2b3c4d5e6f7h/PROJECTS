@@ -1,0 +1,91 @@
+.parent{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20vh;
+	background-color: lightyellow;
+
+}
+.P-Box{
+	width: 200px;
+	height: 70px;
+	padding: 20px;
+	margin: 10px;
+	border: 2px solid #f00;
+	background-color: lightblue;
+	text-align: center;
+	text-transform: uppercase;
+}
+.Box1{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: lightblue;
+	height: 20vh;
+
+}
+.sub-box{
+	width: 150px;
+	height: 70px;
+	padding: 20px;
+	margin: 10px;
+	border: 2px solid #0ff;
+	background-color: lightyellow;
+	text-align: center;
+	text-transform: uppercase;
+}
+.BOX2{
+	display: flex;
+	background-color: lightgreen;
+	justify-content: center;
+	align-items: center;
+	height: 20vh;
+}
+.sub-sub-box{
+	width: 120px;
+	height: 70px;
+	padding: 20px;
+	border: 2px solid #ff0;
+	background-color: limegreen;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 20px;
+}
+.BOX3{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: lightgoldenrodyellow;
+	height: 20vh;
+
+}
+.child-box{
+	width: 100px;
+	height: 70px;
+	border: 2px solid #000;
+	background-color: #cdd;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 20px;
+	margin: 20px;
+}
+.BOX4{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #bbb;
+	height: 20vh;
+
+}
+.sub-child{
+	width: 200px;
+	height: 70px;
+	border: 2px solid #10cc;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #eee;
+	margin: 15px;
+}
