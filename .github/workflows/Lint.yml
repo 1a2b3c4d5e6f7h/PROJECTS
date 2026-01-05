@@ -1,37 +1,37 @@
 name: Lint
 on: [push, pull_request]
+
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v4
         with:
           node-version: '18'
-  
+
       - name: Find package.json (if any)
-         
-    id: find_pkg
-    run: |
-      # list tracked package.json files (empty string if none)
-      files=$(git ls-files '**/package.json' || true)
-      echo "files<<EOF" >> $GITHUB_OUTPUT
-      echo "$files" >> $GITHUB_OUTPUT
-      echo "EOF" >> $GITHUB_OUTPUT
+        id: find_pkg
+        run: |
+          # list tracked package.json files (empty string if none)
+          files=$(git ls-files '**/package.json' || true)
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$files" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
-        - name: Install deps (if package.json found)
-    if: steps.find_pkg.outputs.files != ''
-run:|
-   # pick first package.json path and change to its directory
-      pkg=$(echo "${{ steps.find_pkg.outputs.files }}" | head -n1)
-      pkgdir=$(dirname "$pkg")
-      echo "Using package.json in $pkgdir"
-      npm --prefix "$pkgdir" install
+      - name: Install deps (if package.json found)
+        if: steps.find_pkg.outputs.files != ''
+        run: |
+          # pick first package.json path and change to its directory
+          pkg=$(echo "${{ steps.find_pkg.outputs.files }}" | head -n1)
+          pkgdir=$(dirname "$pkg")
+          echo "Using package.json in $pkgdir"
+          npm --prefix "$pkgdir" install
 
-        - name: Run lint (if package.json found)
-            if: steps.find_pkg.outputs.files != ''
-            run: |
-      pkg=$(echo "${{ steps.find_pkg.outputs.files }}" | head -n1)
-      pkgdir=$(dirname "$pkg")
-      npm --prefix "$pkgdir" run lint
-
+      - name: Run lint (if package.json found)
+        if: steps.find_pkg.outputs.files != ''
+        run: |
+          pkg=$(echo "${{ steps.find_pkg.outputs.files }}" | head -n1)
+          pkgdir=$(dirname "$pkg")
+          npm --prefix "$pkgdir" run lint
