@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto-fill vs Auto-fit</title>
+  <style>
+    body {
+      display: flex;
+      gap: 40px;
+      font-family: sans-serif;
+    }
+    .container {
+      display: grid;
+      gap: 10px;
+      border: 2px solid #333;
+      padding: 10px;
+      flex: 1;
+      min-height: 100px;
+    }
+    .item {
+      background: lightblue;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h2>auto-fill</h2>
+    <div class="container autofill">
+      <div class="item">A</div>
+      <div class="item">B</div>
+    </div>
+  </div>
+
+  <div>
+    <h2>auto-fit</h2>
+    <div class="container autofit">
+      <div class="item">A</div>
+      <div class="item">B</div>
+    </div>
+  </div>
+
+  <style>
+    .autofill {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .autofit {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  </style>
+</body>
+</html>

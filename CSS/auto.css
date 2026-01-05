@@ -1,0 +1,27 @@
+ body {
+      display: flex;
+      gap: 40px;
+      font-family: sans-serif;
+    }
+    .autofill {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .autofit {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .container {
+      display: grid;
+      gap: 10px;
+      border: 2px solid #333;
+      padding: 10px;
+      flex: 1;
+    }
+    .item {
+      background: lightblue;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+    h2 {
+      text-align: center;
+    }

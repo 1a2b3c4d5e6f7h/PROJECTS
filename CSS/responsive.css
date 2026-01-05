@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: arial, serif;
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cadetblue;
+    padding: 16px;
+   
+}
+.logo{
+    font-size: 20px;
+    color: wheat;
+  
+}
+.menu{
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    
+
+}
+  a{
+    text-decoration: none;
+
+ }
+.btn{ 
+    
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    
+    
+}
+.features{
+   
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    min-height: 30vh;
+    background-color: rgb(160, 185, 176);
+    gap: 10px;
+}
+.feature
+{
+ padding: 50% 20px 0px ;
+  height: 90%;
+  font-style: italic;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 10px ;
+}
+.feature.a{ background-color: lightblue;}
+.feature.b{ background-color: lightyellow;}
+.feature.c{ background-color: lightgreen;}
+.feature.d{ background-color: lightblue;}
+section{
+    display: grid;
+    grid-template-columns: 1fr ;
+    background-color: lightskyblue;
+    gap: 10px;
+    min-height: 50vh;
+}
+@media (min-width : 550px) {
+    section {
+
+    display: grid;
+    grid-template-columns: 1fr 3fr ;
+    background-color: lightskyblue;
+    gap: 10px;
+    }
+  
+}
+@media (min-width : 750px) {
+    section {
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr ;
+    background-color: lightskyblue;
+    gap: 10px;
+    }
+
+}
+  aside{
+
+    background-color: burlywood;
+}
+article{
+    background-color: blueviolet;
+}
+main{
+    background-color: lightcyan;
+}
+footer{
+    background-color: #161414;
+    font-size: 17px;
+    height: 200px;
+
+   
+}
+.footer-container{
+    display: grid;
+      color: azure;
+   
+
+}
+.footer-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+list-style: none;
+
+
+}
+.footer-nav.a{
+    text-decoration: none;
+}
+.footer-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    
+list-style: none;
+
+
+}
+footer a{
+    color: azure;
+    text-decoration: none;
+}
+footer p{
+     text-transform: capitalize;
+    text-align: center;
+    margin-top: 35px;
+    font-size: 13px;
+}
+
+
